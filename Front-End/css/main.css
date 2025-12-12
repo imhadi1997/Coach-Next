@@ -1,0 +1,486 @@
+
+.fixed-top{
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+}
+a {
+    color:#dc3545;
+}
+a:hover {
+    color:#e06f7a;
+}
+.nav-stacked .nav-link{
+    color:#666666;
+}
+.nav-stacked .nav-link h5{
+    color:#000;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.nav-stacked .nav-link strong{
+    color:#000;
+}
+.nav-stacked .nav-link p{
+    font-size: 14px;
+}
+.nav-stacked .active{
+    border-left: 5px solid #dc3545;
+    background-color: #f9f9f9;
+}
+
+.nav-stacked .active h5{
+    font-size: 18px;
+}
+.nav-stacked{
+    background-color: #ffffff;
+    width: 100%;
+}
+.leads-header{
+    width: 100%;
+    height: max-content;
+    padding-top: 20px;
+    font-weight: bold;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    font-size: small;
+    text-align: center;
+    background-color: #f2f2f2;
+    z-index: 1;
+    box-shadow: 0px 2px 0px #f2f2f2;
+}
+.lead_close_btn{
+    display: none;
+}
+.lead_view{
+    padding: 30px 40px;
+    margin: 0;
+}
+.tab-content{
+    overflow-y: auto;
+    background-color: #ffffff;
+    width: 100%;
+}
+.leads-content > .leads-sidebar, .leads-info{
+    height: calc(100vh - 75px);
+    overflow-y:auto;
+    transition-property: height;
+    transition-duration: 1s;
+}
+.leads-content.welcomerow .leads-info{
+    height: calc(100vh - 75px - 110px);
+    overflow-y:auto;
+}
+.leads-content.welcomerow .leads-sidebar{
+    height: calc(100vh - 75px - 110px);
+    overflow-y:auto;
+}
+.leads-sidebar{
+    float: left;
+}
+.leads-info{
+    float: right;
+}
+
+.head-ticker{
+    margin: auto;
+    color: #ffffff;
+    background-color: #303030;
+    width: 100%;
+    padding: 10px;
+    height: 110px;
+}
+.head-ticker i{
+    font-size:22px;
+    padding-top: 5px;
+}
+.leads-content{
+    margin-left: 0;
+    margin-right: 0;
+}
+@media (max-width:767px){
+    .leads-sidebar{
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .leads-info{
+        max-width: 100%!important;
+        min-width: 100%!important;
+        height: 100vh;
+    }
+    .tab-content{
+        width: 100%!important;
+        padding-top: 50px;
+        height: 100%;
+    }
+    .nav-stacked{   
+        position: relative;
+        height: auto;
+        overflow-y: initial;
+        width: 100%;
+    }
+    .leads-header{
+        width: 100%;
+        margin-top: -10px;
+    }
+    .hidden{
+        display: none;
+    }
+    .lead_close_btn{
+        display: initial;
+        font-weight: bold;
+    }
+    .lead_view{
+        padding: 30px 0px;
+    }
+    .head-ticker{
+        font-size: 11px;
+        font-weight: lighter!important;
+    }
+    .head-ticker h5{
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+    .head-ticker i{
+        font-size: 15px;
+    }
+    .overlay {  
+        height: 100vh!important;
+        width: 0;
+        position: fixed; 
+        z-index: 1;
+        left: 0;
+        top: 0;
+    }
+}
+/* width */
+/*::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background: #f9f9f9; 
+  }
+   
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(190, 190, 190); 
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(134, 134, 134); 
+  }
+*/
+  /*******************************
+* MODAL AS LEFT/RIGHT SIDEBAR
+* Add "left" or "right" in modal parent div, after class="modal".
+* Get free snippets on bootpen.com
+*******************************/
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+         -o-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog{
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+            transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.in .modal-dialog{
+    left: 0;
+}
+    
+/*Right*/
+.modal.right.fade .modal-dialog {
+    right: -320px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+            transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+    right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+    border-radius: 0;
+    border: none;
+    padding: 10px;
+}
+
+.modal-header {
+    border-bottom-color: #EEEEEE;
+    background-color: #FAFAFA;
+}
+
+.navbar-nav .active{
+    border-bottom: 2px solid #000;
+}
+.navbar {
+    font-weight: bold;
+    padding: 0rem 1rem;
+}
+.width-full{
+    width:100%;
+}
+.header-become-pro{
+    box-shadow: 0px 1px 3px #ff5f6f;
+    overflow: hidden
+}
+.dash-leads-block{
+    box-shadow: 0px 0px 2px #bbbbbb;
+    background:#fff;
+    margin: 0px 20px;
+}
+.dash-leads-found{
+    padding: 0;
+}
+.dash-leads-found .left{
+    padding: 10px;
+}
+.dash-leads-found .right{
+    padding: 10px;
+}
+.dash-leads-found .left .ticker{
+    box-shadow:0px 2px 5px #ffb4bc;
+    min-width:70px; 
+    min-height:70px; 
+    width:max-content; 
+    height:max-content;
+}
+.dash-leads-found .right .ticker{
+    box-shadow:0px 2px 5px #888888;
+    width:max-content;
+    height:40px;
+    margin-top:15px;
+    background:#2e2e2e;
+}
+.dash-leads-found .label{
+    line-height: 70px;
+}
+.dash-leads-found .left .ticker h4{
+    padding:20px 0px;
+}
+.dash-leads-found .right .ticker h4{
+    padding:5px 10px;
+}
+@media (max-width:600px){
+    .dash-leads-found .label{
+        font-size: 12px;
+        line-height: 60px;
+    }
+    .dash-leads-found .left .ticker{
+        margin: 5px 0px;
+        min-width: 50px;
+        min-height: 50px;
+    }
+    .dash-leads-found .right .ticker{
+        margin: 15px 0px;
+        height: 30px;
+    }
+    .dash-leads-found .left .ticker h4{
+        font-size: 15px;
+        padding: 15px 5px ;
+    }
+    .dash-leads-found .right .ticker h4{
+        font-size: 15px;
+        padding: 5px 10px ;
+    }
+
+}
+.dash-response-ticker{
+    width: 70px;
+    height: 70px;
+    margin: 5px auto;
+    background-color: #ff9fa8;
+}
+.dash-response-ticker a{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 65px;
+    padding: 30px 0px;
+}
+.text-faded{
+    color: #c0c0c0!important;
+}
+.link-faded{
+    color: #c0c0c0!important;
+}
+.link-faded:hover{
+    color: #666666!important;
+}
+
+/* (A) "SET" THE TIMELINE CONTAINER */
+.vtl {
+    /* (A1) RELATIVE POSITION NECESSARY TO PROPERLY POSITION TIMELINE LATER */
+    position: relative;
+    /* (A2) RESERVE MORE SPACE TO THE LEFT FOR THE TIMELINE */
+    padding: 10px 10px 10px 50px;
+    /* (A3) OPTIONAL WIDTH RESTRICTION */
+  }
+  
+  /* (B) DRAW TIMELINE USING ::BEFORE */
+  .vtl::before {
+    content: '';
+    width: 1px;
+    background-color: #cecece;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+div.event {
+    padding: 20px 30px;
+    background-color: #fff;
+    border: 1px solid #bbbbbb;
+    position: relative;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+strong.edate {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #3b3b3b;
+}
+p.etxt {
+    margin: 10px 0 0 0;
+    color: rgb(143, 143, 143);
+    font-weight: bold;
+}
+  
+div.event::before {
+    content: '';
+    border: 10px solid transparent;
+    border-right-color: #bbbbbb;
+    border-left: 0;
+    position: absolute;
+    top: 20px;
+    left: -10px;
+}
+  
+div.event::after {
+    content: '';
+    background: #303030;
+    border:10px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: -60px;
+}
+div.event i{
+    position: absolute;
+    top:20px;
+    left:-42px;
+    color: #fff;
+    z-index: 1;
+}
+div.event b{
+    position: absolute;
+    top:17px;
+    left:-39px;
+    color: #fff;
+    z-index: 1;
+}
+.collapsed i{
+    transform: rotate(-180deg);
+    transition-duration: 0.3s;
+}
+.credit-icon{
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/credit.png);
+    background-size: 20px 20px;
+}
+@media only screen and (max-width:767px){
+    .dash-user-block{
+        margin:0px auto;
+        text-align: center;
+    }
+}
+
+.ajax-loader{
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    background-image: url('../images/loader.gif');
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 20px;
+}
+.ajax-loader2{
+    width: 50px;
+    height: 20px;
+    background-image: url('../images/loader.gif');
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin:10px 0px -5px 20px;
+}
+
+.unread-ticker{
+    position: absolute;
+}
+.unread-ticker .unread-dot{
+    background-color: #dc3545;
+    padding:5px;
+    margin:21px 5px 0px -5px;
+    border-radius:20px;
+}
+.account_id{
+    display: none;
+    visibility: hidden;
+}
+.lead_id{
+    display: none;
+    visibility: hidden;
+}
+.int_reasons{
+    margin-top: 20px;
+}
+.int_reasons a{
+    text-decoration: none;
+}
+.int_reasons .int_reason{
+    padding: 15px 30px 10px 30px;
+    color:#b3b3b3;
+}
+.int_reasons .int_reason:hover{
+    background-color: #f2f2f2;
+    cursor: pointer;
+    color:#303030;
+}
